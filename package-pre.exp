@@ -8,7 +8,7 @@ spawn ../tizen-studio/tools/ide/bin/tizen package -t wgt -o ./prerelease -s Jell
 
 expect "Author password:"
 
-send -- "1234\r"
+send -- "Qw123456\r"
 
 expect "Yes: (Y), No: (N) ?"
 
