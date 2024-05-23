@@ -8,7 +8,7 @@ spawn ../tizen-studio/tools/ide/bin/tizen package -t wgt -o ./release -s Jellyfi
 
 expect "Author password:"
 
-send -- "1234\r"
+send -- "Qw123456\r"
 
 expect "Yes: (Y), No: (N) ?"
 
