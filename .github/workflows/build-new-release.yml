@@ -127,7 +127,7 @@ jobs:
         run: |
           # echo $CERTIFICATE_CONTENT > "${GITHUB_WORKSPACE}/tizencert.p12"
           # ./tizen-studio/tools/ide/bin/tizen certificate -a Jellyfin -p 1234 -c NZ -s Aukland -ct Aukland -o Tizen -n Jellyfin -e jellyfin@example.org -f tizencert
-          ./tizen-studio/tools/ide/bin/tizen security-profiles add -n Jellyfin -a "${GITHUB_WORKSPACE}/tizencert.p12" -p 1234
+          ./tizen-studio/tools/ide/bin/tizen security-profiles add -n Jellyfin -a "${GITHUB_WORKSPACE}/author.p12" -p Qw123456
           ./tizen-studio/tools/ide/bin/tizen cli-config "profiles.path=${GITHUB_WORKSPACE}/tizen-studio-data/profile/profiles.xml"
           chmod 755 "${GITHUB_WORKSPACE}/tizen-studio-data/profile/profiles.xml"
         env:
@@ -189,7 +189,7 @@ jobs:
       - name: Prepare for password prompt
         if: success() || steps.buildMaster.conclusion == 'success'
         run: |
-          sed -i "s|${GITHUB_WORKSPACE}/tizencert.pwd|1234|g" ${GITHUB_WORKSPACE}/tizen-studio-data/profile/profiles.xml
+          sed -i "s|${GITHUB_WORKSPACE}/tizencert.pwd|Qw123456|g" ${GITHUB_WORKSPACE}/tizen-studio-data/profile/profiles.xml
           sed -i "s|${GITHUB_WORKSPACE}/tizen-studio-data/tools/certificate-generator/certificates/distributor/tizen-distributor-signer.pwd|tizenpkcs12passfordsigner|g" ${GITHUB_WORKSPACE}/tizen-studio-data/profile/profiles.xml
           sed -i 's|password=""|password="tizenpkcs12passfordsigner"|g' ${GITHUB_WORKSPACE}/tizen-studio-data/profile/profiles.xml
           
