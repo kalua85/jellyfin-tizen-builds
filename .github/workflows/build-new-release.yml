@@ -46,57 +46,57 @@ jobs:
             repository: jellyfin/jellyfin-web
             artifact_name: Jellyfin
             legacy: false
-          # - tag: release-10.9.z
-          #   repository: jellyfin/jellyfin-web
-          #   artifact_name: Jellyfin-10.9.z
-          #   legacy: false
-          # - tag: release-10.8.z
-          #   repository: jellyfin/jellyfin-web
-          #   artifact_name: Jellyfin-10.8.z
-          #   legacy: true
-          # - tag: master
-          #   repository: jellyfin/jellyfin-web
-          #   artifact_name: Jellyfin-master
-          #   legacy: false
-          # - tag: intros
-          #   repository: Bobby306/jellyfin-web
-          #   artifact_name: Jellyfin-intros
-          #   legacy: true
-          # - tag: ${{ github.event.inputs.webReleaseTagName }}
-          #   repository: jellyfin/jellyfin-web
-          #   artifact_name: Jellyfin-TrueHD
-          #   true_hd: true
-          #   legacy: false
-          # - tag: release-10.9.z
-          #   repository: jellyfin/jellyfin-web
-          #   artifact_name: Jellyfin-10.9.z-TrueHD
-          #   true_hd: true
-          #   legacy: false
-          # - tag: release-10.8.z
-          #   repository: jellyfin/jellyfin-web
-          #   artifact_name: Jellyfin-10.8.z-TrueHD
-          #   true_hd: true
-          #   legacy: true
-          # - tag: master
-          #   repository: jellyfin/jellyfin-web
-          #   artifact_name: Jellyfin-master-TrueHD
-          #   true_hd: true
-          #   legacy: false
-          # - tag: intros
-          #   repository: Bobby306/jellyfin-web
-          #   artifact_name: Jellyfin-intros-TrueHD
-          #   true_hd: true
-          #   legacy: true
-          # - tag: ${{ github.event.inputs.webReleaseTagName }}
-          #   repository: jellyfin/jellyfin-web
-          #   artifact_name: Jellyfin-secondary
-          #   legacy: false
-          #   secondary: true
-          # - tag: release-10.9.z
-          #   repository: jellyfin/jellyfin-web
-          #   artifact_name: Jellyfin-10.9.z-secondary
-          #   legacy: false
-          #   secondary: true
+          - tag: release-10.9.z
+            repository: jellyfin/jellyfin-web
+            artifact_name: Jellyfin-10.9.z
+            legacy: false
+          - tag: release-10.8.z
+            repository: jellyfin/jellyfin-web
+            artifact_name: Jellyfin-10.8.z
+            legacy: true
+          - tag: master
+            repository: jellyfin/jellyfin-web
+            artifact_name: Jellyfin-master
+            legacy: false
+          - tag: intros
+            repository: Bobby306/jellyfin-web
+            artifact_name: Jellyfin-intros
+            legacy: true
+          - tag: ${{ github.event.inputs.webReleaseTagName }}
+            repository: jellyfin/jellyfin-web
+            artifact_name: Jellyfin-TrueHD
+            true_hd: true
+            legacy: false
+          - tag: release-10.9.z
+            repository: jellyfin/jellyfin-web
+            artifact_name: Jellyfin-10.9.z-TrueHD
+            true_hd: true
+            legacy: false
+          - tag: release-10.8.z
+            repository: jellyfin/jellyfin-web
+            artifact_name: Jellyfin-10.8.z-TrueHD
+            true_hd: true
+            legacy: true
+          - tag: master
+            repository: jellyfin/jellyfin-web
+            artifact_name: Jellyfin-master-TrueHD
+            true_hd: true
+            legacy: false
+          - tag: intros
+            repository: Bobby306/jellyfin-web
+            artifact_name: Jellyfin-intros-TrueHD
+            true_hd: true
+            legacy: true
+          - tag: ${{ github.event.inputs.webReleaseTagName }}
+            repository: jellyfin/jellyfin-web
+            artifact_name: Jellyfin-secondary
+            legacy: false
+            secondary: true
+          - tag: release-10.9.z
+            repository: jellyfin/jellyfin-web
+            artifact_name: Jellyfin-10.9.z-secondary
+            legacy: false
+            secondary: true
 
     steps:
       - run: env
